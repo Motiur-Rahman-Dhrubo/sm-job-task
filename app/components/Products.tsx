@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import leaf from "../../public/image/leaf.png";
 import Link from "next/link";
@@ -61,13 +61,13 @@ const Products = () => {
         src={leaf}
         width={60}
         alt="leaf"
-        className="absolute top-[10%] right-[10%]"
+        className="absolute top-[2%] right-[10%]"
       />
       <Image
         src={leaf}
         width={60}
         alt="leaf"
-        className="absolute top-[25%] left-[10%] rotate-[45deg]"
+        className="absolute top-[6%] left-[10%] rotate-[45deg]"
       />
       <div className="flex w-11/12 mx-auto flex-col items-center">
         <h3 className="font-medium text-xl text-[#749B3F] text-center bg-[#749B3F1A] inline rounded-lg px-3 py-1">
