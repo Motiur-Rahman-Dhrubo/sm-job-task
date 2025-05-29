@@ -18,29 +18,31 @@ const NavBar = () => {
 
   const links = (
     <>
-      <Link href="/" className={`hover:bg-[#1E1812] lg:px-2 px-4 py-1 rounded-lg ${pathname === "/" ? "bg-[#1E1812]" : ""}`}>Home</Link>
-      <Link href="/shop" className={`hover:bg-[#1E1812] lg:px-2 px-4 py-1 rounded-lg ${pathname === "/shop" ? "bg-[#1E1812]" : ""}`}>Shop</Link>
-      <Link href="/about-us" className={`hover:bg-[#1E1812] lg:px-2 px-4 py-1 rounded-lg ${pathname === "/about-us" ? "bg-[#1E1812]" : ""}`}>About us</Link>
-      <Link href="/blog" className={`hover:bg-[#1E1812] lg:px-2 px-4 py-1 rounded-lg ${pathname === "/blog" ? "bg-[#1E1812]" : ""}`}>Blog</Link>
+      <Link href="/" className={`relative hover:text-[#749B3F] transition-colors duration-200 ${pathname === "/" ? "after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-[15px] after:bg-[#749B3F] after:rounded-full after:content-['']" : ""} `}>Home</Link>
+      <Link href="/shop" className={`relative hover:text-[#749B3F] transition-colors duration-200  ${pathname === "/shop" ? "after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-[15px] after:bg-[#749B3F] after:rounded-full after:content-['']" : ""}`}>Shop</Link>
+      <Link href="/about-us" className={`relative hover:text-[#749B3F] transition-colors duration-200  ${pathname === "/about-us" ? "after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-[15px] after:bg-[#749B3F] after:rounded-full after:content-['']" : ""}`}>About us</Link>
+      <Link href="/blog" className={`relative hover:text-[#749B3F] transition-colors duration-200  ${pathname === "/blog" ? "after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[3px] after:w-[15px] after:bg-[#749B3F] after:rounded-full after:content-['']" : ""}`}>Blog</Link>
     </>
   );
 
   return (
-    <nav className="w-full sticky top-0 z-50 bg-black/90">
-      <div className="w-11/12 mx-auto flex items-center justify-between md:py-4 py-2 text-[#DCA54C]">
-        <Link href="/" className="flex gap-2.5 text-2xl lg:text-4xl">
+    <nav className="w-full fixed top-0 z-50 bg-white/0 backdrop-blur-xs shadow-md">
+      <div className="w-11/12 mx-auto flex items-center justify-between md:py-4 py-2">
+      
+        {/* logo */}
+        <Link href="/" className="flex gap-2.5 text-3xl items-center text-[#212337] font-bold">
           <Image src={icon} width={40} height={40} alt="icon" />
           Fresh Harvest
         </Link>
-        <div className="text-lg gap-1 lg:flex items-center hidden">{links}</div>
-        <Link
-          href="/contact-us"
-          className="border rounded-full hover:bg-[#DCA54C] hover:text-black px-5 py-1 hidden lg:flex items-center gap-2"
-        >
-          {" "}
-          <FaRegEnvelope /> Contact Us
-        </Link>
 
+        {/* links */}
+        <div className="text-sm font-normal text-[#4A4A52] gap-16 lg:flex items-center hidden">{links}</div>
+
+        {/* buttons */}
+        <button className="border border-[#212337] text-[#212337] text-sm font-semibold rounded-sm hover:bg-[#212337] hover:text-white h-[40px] w-[100px]">Sign in</button>
+
+
+        {/* mobile */}
         <button
           className="text-xl lg:hidden cursor-pointer"
           onClick={toggleDrawer}
@@ -77,7 +79,7 @@ const NavBar = () => {
             className="w-fit border rounded-full hover:bg-[#DCA54C] hover:text-black px-5 py-1 flex items-center gap-2"
           >
             {" "}
-            <FaRegEnvelope /> Contact Us
+            <FaRegEnvelope /> Sign in
           </Link>
         </div>
       </div>
