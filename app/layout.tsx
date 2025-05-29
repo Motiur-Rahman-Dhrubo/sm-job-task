@@ -27,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${rubik.variable} ${questrial.variable}`}>
-      <body className={"font-rubik antialiased"}>
+      <body className={"font-rubik antialiased"} 
+      data-new-gr-c-s-check-loaded="14.1237.0" data-gr-ext-installed=""
+      >
         <NavBar></NavBar>
         {children}
       </body>

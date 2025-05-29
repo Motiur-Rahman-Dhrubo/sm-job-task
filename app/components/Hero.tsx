@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import leaf from "../../public/image/leaf.png";
 import arrow from "../../public/image/arrow.png";
 import Link from "next/link";
@@ -22,7 +21,7 @@ const Hero = () => {
         src={leaf}
         width={60}
         alt="leaf"
-        className="absolute top-[30%] left-[55%]"
+        className="absolute top-[25%] left-[55%]"
       />
       <Image
         src={leaf}
