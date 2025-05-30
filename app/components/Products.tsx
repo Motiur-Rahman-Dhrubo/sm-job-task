@@ -129,6 +129,8 @@ const Products = () => {
             ))
           )}
         </div>
+
+        
         <Link
           href="/shop"
           className="text-[#FF6A1A] border border-[#FF6A1A] hover:bg-[#FF6A1A] hover:text-white font-semibold text-lg px-8 py-4 rounded-lg mt-8"
