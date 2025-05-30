@@ -34,7 +34,7 @@ const testimonials = [
 
 const TestimonialCarousel = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto mt-16">
+    <div className="w-full max-w-4xl mx-auto mt-12">
       <Swiper
         slidesPerView={1}
         pagination={{ clickable: true }}
