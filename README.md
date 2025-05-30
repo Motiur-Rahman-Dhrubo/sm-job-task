@@ -35,3 +35,67 @@ npm run dev
 ```
 
 4. **Open your browser and go to http://localhost:3000**
+
+
+## 🛠️ Build and Deployment Steps
+
+### 📦 Production Build
+
+**To create an optimized production build:**
+
+```bash
+npm run build
+```
+
+**To preview the production build locally:**
+
+```bash
+npm start
+```
+
+## 🚀 Deployment on Netlify
+
+1. **Push the project to a GitHub repository**
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/your-username/fresh-harvest.git
+git push -u origin main
+```
+
+2. **Go to Netlify**
+
+- Click "Add new site" → "Import from Git"
+
+- Connect your GitHub account and select the repository
+
+3. **Configure Build Settings**
+
+- Build Command: npm run build
+
+- Publish Directory: .next
+
+- Add environment variables if needed (e.g. NODE_VERSION)
+
+4. **Install Netlify Adapter (if using App Router)**
+
+```bash
+npm install @netlify/next
+```
+
+**Update next.config.js:**
+
+```bash
+const withNetlify = require("@netlify/next");
+
+module.exports = withNetlify({
+  reactStrictMode: true,
+});
+```
+
+5. **Deploy**
+
+- Netlify will auto-deploy on every push to the main branch.
