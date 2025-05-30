@@ -4,6 +4,12 @@ This is a modern e-commerce frontend built with **Next.js**, designed to showcas
 
 ---
 
+## 🌐 Live Demo
+
+🔗 [View Live Site](https://fresh-harvest-motiur.netlify.app/)
+
+---
+
 ## 📦 Project Setup
 
 ### ✅ Requirements
@@ -35,6 +41,8 @@ npm run dev
 ```
 
 4. **Open your browser and go to http://localhost:3000**
+
+---
 
 
 ## 🛠️ Build and Deployment Steps
